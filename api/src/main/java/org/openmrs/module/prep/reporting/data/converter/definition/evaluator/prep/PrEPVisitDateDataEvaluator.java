@@ -35,7 +35,7 @@ public class PrEPVisitDateDataEvaluator implements PersonDataEvaluator {
 	        throws EvaluationException {
 		EvaluatedPersonData c = new EvaluatedPersonData(definition, context);
 		
-		String qry = "select encounter_id, date(visit_date) from kenyaemr_etl.etl_hts_test ";
+		String qry = "select f.patient_id,max(date(f.visit_date)) as visit_date from kenyaemr_etl.etl_prep_followup f group by f.patient_id;";
 		
 		SqlQueryBuilder queryBuilder = new SqlQueryBuilder();
 		queryBuilder.append(qry);

@@ -107,7 +107,6 @@ public class PrEPRegisterReportBuilder extends AbstractHybridReportBuilder {
 		dsd.addColumn("HTS", new HTSDataDefinition(), "");
 		dsd.addColumn("STI Screened/Results", new STIDataDefinition(), "");
 		dsd.addColumn("Creatinine Clearance/Results", new CreatinineDataDefinition(), "");
-		dsd.addColumn("At Risk of HIV Infection", new HIVRiskDataDefinition(), "");
 		dsd.addColumn("Reason for HIV Risk", new HIVRiskReasonDataDefinition(), "");
 		dsd.addColumn("Adherence", new AdherenceDataDefinition(), "");
 		dsd.addColumn("Received Adherence Counselling", new AdherenceCounsellingDataDefinition(), "");

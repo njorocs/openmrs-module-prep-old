@@ -35,7 +35,9 @@ public class YearlyCreatinineDataEvaluator implements PersonDataEvaluator {
 	        throws EvaluationException {
 		EvaluatedPersonData c = new EvaluatedPersonData(definition, context);
 		
-		String qry = "select encounter_id, remarks from kenyaemr_etl.etl_hts_test ";
+		String qry = "select e.patient_id,concat_ws('\\r\\n',if(e.patient_id=x.patient_id,'Yes','No'),x.test_result) as creatinine from kenyaemr_etl.etl_prep_enrolment e left outer join\n"
+		        + "                              (select l.patient_id,l.test_result from kenyaemr_etl.etl_laboratory_extract l\n"
+		        + "                               where l.lab_test = 790) x on e.patient_id = x.patient_id;";
 		
 		SqlQueryBuilder queryBuilder = new SqlQueryBuilder();
 		queryBuilder.append(qry);
