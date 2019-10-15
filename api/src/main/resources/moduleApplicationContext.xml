@@ -18,7 +18,7 @@
     <!-- Wraps PrepService methods in DB transactions and OpenMRS interceptors,
     which set audit info like dateCreated, changedBy, etc.-->
     <bean id="prep.PrepService"
-            class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
         <property name="transactionManager">
             <ref bean="transactionManager" />
         </property>
@@ -27,7 +27,7 @@
                 <property name="prepDao" >
                     <bean class="org.openmrs.module.prep.api.dao.HibernatePrepDao">
                         <property name="sessionFactory">
-                        <ref bean="sessionFactory" />
+                            <ref bean="sessionFactory" />
 
                         </property>
                     </bean>
@@ -54,7 +54,7 @@
         </property>
     </bean>
 
-       <!-- ===================== Program ===================== -->
+    <!-- ===================== Program ===================== -->
 
     <bean id="prep.prep.program" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
         <property name="targetUuid" value="214cad1c-bb62-4d8e-b927-810a046daf62" />
@@ -229,11 +229,11 @@
             <set>
                 <ref bean="kenyaemr.app.reports" />
             </set></property>
-        <property name="template" value="hivtestingservices:PNS_Register_Template.xls" />
-        <property name="repeatingSection" value="sheet:1,row:7,dataset:PrEPRegister" />
+        <property name="template" value="prep:PrEP_Register_Template.xls" />
+        <property name="repeatingSection" value="sheet:1,row:8,dataset:PrEPRegister" />
     </bean>
 
- <!--Moh731B-->
+    <!--Moh731B-->
     <bean id="kenyaemr.prep.common.report.moh731B" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
         <property name="targetUuid" value="c299bace-e455-499c-aa3d-5ffacf4e773f" />
         <property name="name" value="MOH 731B Report-PrEP" />

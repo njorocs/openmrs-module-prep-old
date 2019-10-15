@@ -85,358 +85,359 @@ public class ETLMoh731BIndicatorLibrary {
 	
 	// 2.Number Newly on PrEP
 	/**
-	 * Number GP Newly on PrEP
+	 * Number GP Newly on PrEP HV02
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator newlyOnPreEPGP() {
+	public CohortIndicator newOnPrEPGP() {
 		return cohortIndicator("GP Individuals newly on PrEP",
 		    map(moh731BCohorts.newlyOnPreEPGP(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number MSM Newly for PrEP covers indicators HV01- - HV01-
+	 * Number MSM Newly for PrEP covers indicators HV02
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator newlyOnPreEPMSM() {
+	public CohortIndicator newOnPrEPMSM() {
 		return cohortIndicator("MSM Individuals newly on PrEP",
 		    map(moh731BCohorts.newlyOnPreEPMSM(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number FSW Newly on PrEP covers indicators HV01- - HV01-
+	 * Number FSW Newly on PrEP covers indicators HV02
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator newlyOnPreEPFSW() {
+	public CohortIndicator newOnPrEPFSW() {
 		return cohortIndicator("FSW Individuals newly on PrEP",
 		    map(moh731BCohorts.newlyOnPreEPFSW(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number PWID Newly on PrEP covers indicators HV01- - HV01-
+	 * Number PWID Newly on PrEP covers indicators HV02
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator newlyOnPreEPPWID() {
+	public CohortIndicator newOnPrEPPWID() {
 		return cohortIndicator("PWID Individuals newly on PrEP",
 		    map(moh731BCohorts.newlyOnPreEPPWID(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number Discordant newly on PrEP covers indicators HV01- - HV01-
+	 * Number Discordant newly on PrEP covers indicators HV02
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator newlyOnPreEPDiscordant() {
+	public CohortIndicator newOnPrEPDiscordant() {
 		return cohortIndicator("Discordant Individuals Newly on PrEP",
 		    map(moh731BCohorts.newlyOnPreEPDiscordant(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	// 3.Number Refilling on PrEP
 	/**
-	 * Number GP Refill on PrEP
+	 * Number GP Refill on PrEP HV03
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator refillOnPreEPGP() {
+	public CohortIndicator refillingPrEPGP() {
 		return cohortIndicator("GP Individuals refill on PrEP",
 		    map(moh731BCohorts.refillOnPreEPGP(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number MSM Refill on PrEP covers indicators HV01- - HV01-
+	 * Number MSM Refill on PrEP covers indicators HV03
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator refillOnPreEPMSM() {
+	public CohortIndicator refillingPrEPMSM() {
 		return cohortIndicator("MSM Individuals refill on PrEP",
 		    map(moh731BCohorts.refillOnPreEPMSM(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number FSW Refill on PrEP covers indicators HV01- - HV01-
+	 * Number FSW Refill on PrEP covers indicators HV03
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator refillOnPreEPFSW() {
+	public CohortIndicator refillingPrEPFSW() {
 		return cohortIndicator("FSW Individuals refill on PrEP",
 		    map(moh731BCohorts.refillOnPreEPFSW(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number PWID Refill on PrEP covers indicators HV01- - HV01-
+	 * Number PWID Refill on PrEP covers indicators HV03
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator refillOnPreEPPWID() {
+	public CohortIndicator refillingPrEPPWID() {
 		return cohortIndicator("PWID Individuals refill on PrEP",
 		    map(moh731BCohorts.refillOnPreEPPWID(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number Discordant Refill on PrEP covers indicators HV01- - HV01-
+	 * Number Discordant Refill on PrEP covers indicators HV03
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator refillOnPreEPDiscordant() {
+	public CohortIndicator refillingPrEPDiscordant() {
 		return cohortIndicator("Discordant Individuals Refill on PrEP",
 		    map(moh731BCohorts.refillOnPreEPDiscordant(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	// 4.Number Restart on PrEP
 	/**
-	 * Number GP Restart on PrEP
+	 * Number GP Restart on PrEP HV04
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator restartOnPreEPGP() {
+	public CohortIndicator restartingPrEPGP() {
 		return cohortIndicator("GP Individuals restart on PrEP",
 		    map(moh731BCohorts.restartOnPreEPGP(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number MSM Restart on PrEP covers indicators HV01- - HV01-
+	 * Number MSM Restart on PrEP covers indicators HV04
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator restartOnPreEPMSM() {
+	public CohortIndicator restartingPrEPMSM() {
 		return cohortIndicator("MSM Individuals restart on PrEP",
 		    map(moh731BCohorts.restartOnPreEPMSM(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number FSW Restart on PrEP covers indicators HV01- - HV01-
+	 * Number FSW Restart on PrEP covers indicators HV04
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator restartOnPreEPFSW() {
+	public CohortIndicator restartingPrEPFSW() {
 		return cohortIndicator("FSW Individuals restart on PrEP",
 		    map(moh731BCohorts.restartOnPreEPFSW(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number PWID Restart on PrEP covers indicators HV01- - HV01-
+	 * Number PWID Restart on PrEP covers indicators HV04
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator restartOnPreEPPWID() {
+	public CohortIndicator restartingPrEPPWID() {
 		return cohortIndicator("PWID Individuals restart on PrEP",
 		    map(moh731BCohorts.restartOnPreEPPWID(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number Discordant Restart on PrEP covers indicators HV01- - HV01-
+	 * Number Discordant Restart on PrEP covers indicators HV04
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator restartOnPreEPDiscordant() {
+	public CohortIndicator restartingPrEPDiscordant() {
 		return cohortIndicator("Discordant Individuals Restart on PrEP",
 		    map(moh731BCohorts.restartOnPreEPDiscordant(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	// 5.Number Current on PrEP
 	/**
-	 * Number GP Current on PrEP
+	 * Number GP Current on PrEP HV05
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator currentOnPreEPGP() {
+	public CohortIndicator currentlyOnPrEPGP() {
 		return cohortIndicator("GP Individuals current on PrEP",
 		    map(moh731BCohorts.currentOnPreEPGP(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number MSM Current on PrEP covers indicators HV01- - HV01-
+	 * Number MSM Current on PrEP covers indicators HV05
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator currentOnPreEPMSM() {
+	public CohortIndicator currentlyOnPrEPMSM() {
 		return cohortIndicator("MSM Individuals current on PrEP",
 		    map(moh731BCohorts.currentOnPreEPMSM(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number FSW Current on PrEP covers indicators HV01- - HV01-
+	 * Number FSW Current on PrEP covers indicators HV05
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator currentOnPreEPFSW() {
+	public CohortIndicator currentlyOnPrEPFSW() {
 		return cohortIndicator("FSW Individuals current on PrEP",
 		    map(moh731BCohorts.currentOnPreEPFSW(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number PWID Current on PrEP covers indicators HV01- - HV01-
+	 * Number PWID Current on PrEP covers indicators HV05
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator currentOnPreEPPWID() {
+	public CohortIndicator currentlyOnPrEPPWID() {
 		return cohortIndicator("PWID Individuals current on PrEP",
 		    map(moh731BCohorts.currentOnPreEPPWID(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number Discordant Current on PrEP covers indicators HV01- - HV01-
+	 * Number Discordant Current on PrEP covers indicators HV05
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator currentOnPreEPDiscordant() {
+	public CohortIndicator currentlyOnPrEPDiscordant() {
 		return cohortIndicator("Discordant Individuals Current on PrEP",
 		    map(moh731BCohorts.currentOnPreEPDiscordant(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	// 6.Number Positive while on PrEP
 	/**
-	 * Number GP Positive while on PrEP
+	 * Number GP Positive while on PrEP HV06
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator positiveOnPreEPGP() {
+	public CohortIndicator seroconvertedOnPrEPGP() {
 		return cohortIndicator("GP Individuals positive on PrEP",
 		    map(moh731BCohorts.positiveOnPreEPGP(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number MSM Positive on PrEP covers indicators HV01- - HV01-
+	 * Number MSM Positive on PrEP covers indicators HV06
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator positiveOnPreEPMSM() {
+	public CohortIndicator seroconvertedOnPrEPMSM() {
 		return cohortIndicator("MSM Individuals Positive on PrEP",
 		    map(moh731BCohorts.positiveOnPreEPMSM(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number FSW Positive on PrEP covers indicators HV01- - HV01-
+	 * Number FSW Positive on PrEP covers indicators HV06
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator positiveOnPreEPFSW() {
+	public CohortIndicator seroconvertedOnPrEPFSW() {
 		return cohortIndicator("FSW Individuals Positive on PrEP",
 		    map(moh731BCohorts.positiveOnPreEPFSW(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number PWID Positive on PrEP covers indicators HV01- - HV01-
+	 * Number PWID Positive on PrEP covers indicators HV06
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator positiveOnPreEPPWID() {
+	public CohortIndicator seroconvertedOnPrEPPWID() {
 		return cohortIndicator("PWID Individuals Positive on PrEP",
 		    map(moh731BCohorts.positiveOnPreEPPWID(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number Discordant Positive on PrEP covers indicators HV01- - HV01-
+	 * Number Discordant Positive on PrEP covers indicators HV06
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator positiveOnPreEPDiscordant() {
+	public CohortIndicator seroconvertedOnPrEPDiscordant() {
 		return cohortIndicator("Discordant Individuals Positive on PrEP",
 		    map(moh731BCohorts.positiveOnPreEPDiscordant(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	// 7.Number STI Diagnosed while on PrEP
 	/**
-	 * Number GP STI Diagnosed while on PrEP
+	 * Number GP STI Diagnosed while on PrEP HV07
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator stiDiagnosedOnPreEPGP() {
+	public CohortIndicator diagnosedWithSTIGP() {
 		return cohortIndicator("GP Individuals STI disgnosed on PrEP",
 		    map(moh731BCohorts.stiDiagnosedOnPreEPGP(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number MSM STI disgnosed on PrEP covers indicators HV01- - HV01-
+	 * Number MSM STI disgnosed on PrEP covers indicators HV07
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator stiDiagnosedOnPreEPMSM() {
+	public CohortIndicator diagnosedWithSTIMSM() {
 		return cohortIndicator("MSM Individuals STI disgnosed on PrEP",
 		    map(moh731BCohorts.stiDiagnosedOnPreEPMSM(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number FSW STI disgnosed on PrEP covers indicators HV01- - HV01-
+	 * Number FSW STI disgnosed on PrEP covers indicators HV07
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator stiDiagnosedOnPreEPFSW() {
+	public CohortIndicator diagnosedWithSTIFSW() {
 		return cohortIndicator("FSW Individuals STI disgnosed on PrEP",
 		    map(moh731BCohorts.stiDiagnosedOnPreEPFSW(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number PWID STI disgnosed on PrEP covers indicators HV01- - HV01-
+	 * Number PWID STI disgnosed on PrEP covers indicators HV07
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator stiDiagnosedOnPreEPPWID() {
+	public CohortIndicator diagnosedWithSTIPWID() {
 		return cohortIndicator("PWID Individuals STI disgnosed on PrEP",
 		    map(moh731BCohorts.stiDiagnosedOnPreEPPWID(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number Discordant STI disgnosed on PrEP covers indicators HV01- - HV01-
+	 * Number Discordant STI disgnosed on PrEP covers indicators HV07
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator stiDiagnosedOnPreEPDiscordant() {
+	public CohortIndicator diagnosedWithSTIDiscordant() {
 		return cohortIndicator("Discordant Individuals STI disgnosed on PrEP",
 		    map(moh731BCohorts.stiDiagnosedOnPreEPDiscordant(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	// 8.Number Discontinued on PrEP
 	/**
-	 * Number GP Discontinued PrEP
+	 * Number GP Discontinued PrEP HV08
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator discontinuedPreEPGP() {
+	public CohortIndicator discontinuedPrEPGP() {
 		return cohortIndicator("GP Individuals Discontinued PrEP",
 		    map(moh731BCohorts.discontinuedPreEPGP(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number MSM STI disgnosed on PrEP covers indicators HV01- - HV01-
+	 * Number MSM STI disgnosed on PrEP covers indicators HV08
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator discontinuedPreEPMSM() {
+	public CohortIndicator discontinuedPrEPMSM() {
 		return cohortIndicator("MSM Individuals Discontinued PrEP",
 		    map(moh731BCohorts.discontinuedPreEPMSM(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number FSW Discontinued PrEP covers indicators HV01- - HV01-
+	 * Number FSW Discontinued PrEP covers indicators HV08
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator discontinuedPreEPFSW() {
+	public CohortIndicator discontinuedPrEPFSW() {
 		return cohortIndicator("FSW Individuals Discontinued PrEP",
 		    map(moh731BCohorts.discontinuedPreEPFSW(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number PWID Discontinued PrEP covers indicators HV01- - HV01-
+	 * Number PWID Discontinued PrEP covers indicators HV08
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator discontinuedPreEPPWID() {
+	public CohortIndicator discontinuedPrEPPWID() {
 		return cohortIndicator("PWID Individuals Discontinued PrEP",
 		    map(moh731BCohorts.discontinuedPreEPPWID(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	/**
-	 * Number Discordant Discontinued PrEP covers indicators HV01- - HV01-
+	 * Number Discordant Discontinued PrEP covers indicators HV08
 	 * 
 	 * @return indicator
 	 */
-	public CohortIndicator discontinuedPreEPDiscordant() {
+	public CohortIndicator discontinuedPrEPDiscordant() {
 		return cohortIndicator("Discordant Individuals Discontinued PrEP",
 		    map(moh731BCohorts.discontinuedPreEPDiscordant(), "startDate=${startDate},endDate=${endDate}"));
 	}
+	
 }

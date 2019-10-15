@@ -35,7 +35,11 @@ public class HIVRiskReasonDataEvaluator implements PersonDataEvaluator {
 	        throws EvaluationException {
 		EvaluatedPersonData c = new EvaluatedPersonData(definition, context);
 		
-		String qry = "select encounter_id, remarks from kenyaemr_etl.etl_hts_test ";
+		String qry = "select h.patient_id,concat_ws('\\r\\n',h.assessment_outcome,(concat_ws(',',COALESCE(if(sexual_partner_hiv_status='HIV Positive',1,null)),COALESCE(if(sex_with_multiple_partners='Yes',9,null)),\n"
+		        + "                              COALESCE(if(transactional_sex='Yes',2,null)),COALESCE(if(recent_sti_infected='Yes',3,null)),\n"
+		        + "                              COALESCE(if(recurrent_pep_use='Yes',4,null)),COALESCE(if(recurrent_sex_under_influence='Yes',5,null)),\n"
+		        + "                              COALESCE(if(inconsistent_no_condom_use='Yes',6,null)),COALESCE(if(sharing_drug_needles='Yes',7,null)),COALESCE(if(ipv_gbv='Yes',10,null))))) as reason_for_eligibility\n"
+		        + "from kenyaemr_etl.etl_prep_behaviour_risk_assessment h;";
 		
 		SqlQueryBuilder queryBuilder = new SqlQueryBuilder();
 		queryBuilder.append(qry);
