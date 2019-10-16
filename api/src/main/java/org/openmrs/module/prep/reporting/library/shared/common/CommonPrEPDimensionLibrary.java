@@ -49,10 +49,10 @@ public class CommonPrEPDimensionLibrary {
 		CohortDefinitionDimension dim = new CohortDefinitionDimension();
 		dim.setName("standard age between(btw 15 and 19, btw 20 and 24, btw 25 and 30, 30+");
 		dim.addParameter(new Parameter("onDate", "Date", Date.class));
-		dim.addCohortDefinition("15 - 19", map(commonCohortLibrary.agedAtMost(19), "effectiveDate=${onDate}"));
-		dim.addCohortDefinition("20 - 24", map(commonCohortLibrary.agedAtMost(24), "effectiveDate=${onDate}"));
-		dim.addCohortDefinition("25 - 30", map(commonCohortLibrary.agedAtMost(30), "effectiveDate=${onDate}"));
-		dim.addCohortDefinition("30+", map(commonCohortLibrary.agedAtLeast(30), "effectiveDate=${onDate}"));
+		dim.addCohortDefinition("15-19", map(commonCohortLibrary.agedAtLeastAgedAtMost(15, 19), "effectiveDate=${onDate}"));
+		dim.addCohortDefinition("20-24", map(commonCohortLibrary.agedAtLeastAgedAtMost(20, 24), "effectiveDate=${onDate}"));
+		dim.addCohortDefinition("25-30", map(commonCohortLibrary.agedAtLeastAgedAtMost(25, 30), "effectiveDate=${onDate}"));
+		dim.addCohortDefinition("30+", map(commonCohortLibrary.agedAtLeast(31), "effectiveDate=${onDate}"));
 		
 		return dim;
 	}
