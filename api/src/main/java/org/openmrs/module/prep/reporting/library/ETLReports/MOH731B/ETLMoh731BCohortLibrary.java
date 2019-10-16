@@ -35,7 +35,7 @@ public class ETLMoh731BCohortLibrary {
 	public CohortDefinition eligibleForPreEPGP() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		String sqlQuery = "select distinct e.patient_id\n" + "               from kenyaemr_etl.etl_prep_enrolment e\n"
-		        + "               left outer join kenyaemr_etl.etl_hts_test t\n"
+		        + "               inner join kenyaemr_etl.etl_hts_test t\n"
 		        + "               on e.patient_id = t.patient_id\n"
 		        + "               where t.population_type = 'General Population'\n"
 		        + "               and date(e.visit_date) between date(:startDate) and date(:endDate);";
@@ -51,7 +51,7 @@ public class ETLMoh731BCohortLibrary {
 	public CohortDefinition eligibleForPreEPMSM() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		String sqlQuery = "select distinct e.patient_id\n" + "from kenyaemr_etl.etl_prep_enrolment e\n"
-		        + "left outer join kenyaemr_etl.etl_hts_test t\n" + "on e.patient_id = t.patient_id\n"
+		        + "inner join kenyaemr_etl.etl_hts_test t\n" + "on e.patient_id = t.patient_id\n"
 		        + "where t.key_population_type = 'Men who have sex with men'\n"
 		        + "and date(e.visit_date) between date(:startDate) and date(:endDate);";
 		cd.setName("eligibleForPreEPMSM");
@@ -66,7 +66,7 @@ public class ETLMoh731BCohortLibrary {
 	public CohortDefinition eligibleForPreEPFSW() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		String sqlQuery = "select distinct e.patient_id\n" + "from kenyaemr_etl.etl_prep_enrolment e\n"
-		        + "  left outer join kenyaemr_etl.etl_hts_test t\n" + "    on e.patient_id = t.patient_id\n"
+		        + "  inner join kenyaemr_etl.etl_hts_test t\n" + "    on e.patient_id = t.patient_id\n"
 		        + "where t.key_population_type = 'Female sex Worker'\n"
 		        + "      and date(e.visit_date) between date(:startDate) and date(:endDate);";
 		cd.setName("eligibleForPreEPFSW");
@@ -81,7 +81,7 @@ public class ETLMoh731BCohortLibrary {
 	public CohortDefinition eligibleForPreEPPWID() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		String sqlQuery = "select distinct e.patient_id\n" + "from kenyaemr_etl.etl_prep_enrolment e\n"
-		        + "  left outer join kenyaemr_etl.etl_hts_test t\n" + "    on e.patient_id = t.patient_id\n"
+		        + "  inner join kenyaemr_etl.etl_hts_test t\n" + "    on e.patient_id = t.patient_id\n"
 		        + "where t.key_population_type = 'People who inject drugs'\n"
 		        + "      and date(e.visit_date) between date(:startDate) and date(:endDate);";
 		cd.setName("eligibleForPreEPPWID");
@@ -96,7 +96,7 @@ public class ETLMoh731BCohortLibrary {
 	public CohortDefinition eligibleForPreEPDiscordant() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		String sqlQuery = "select distinct e.patient_id\n" + "from kenyaemr_etl.etl_prep_enrolment e\n"
-		        + " left outer join kenyaemr_etl.etl_hts_test t\n" + "on e.patient_id = t.patient_id\n"
+		        + " inner join kenyaemr_etl.etl_hts_test t\n" + "on e.patient_id = t.patient_id\n"
 		        + "where t.couple_discordant = 'Yes'\n"
 		        + " and date(e.visit_date) between date(:startDate) and date(:endDate);";
 		cd.setName("eligibleForPreEPDiscordant");
